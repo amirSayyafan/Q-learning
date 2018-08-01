@@ -22,3 +22,5 @@ We need to measure 3 metrics:\
 2- Data Efficiency: the amount of data used for the actual controlled system during learning (to get a specific accuracy)\
 3- Learning Cost: how long the algorithm needs to train (depends on the amount of computation- computation efficiency)\
 For the Data Accuracy, we train the system by 40 trials and during these training process, we measure the accuracy (since we know the ground truth states). The following curve is the result for these 40 trails:\
+![image](https://user-images.githubusercontent.com/20415408/43531451-a6e27324-9564-11e8-9739-1357def50366.png)
+
