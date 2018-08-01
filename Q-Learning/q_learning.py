@@ -196,9 +196,9 @@ if __name__ == "__main__":
     Q_table, result, index, time_itr, err = training (N, R, Q, A, num_steps, num_trials, gamma, flag_num_steps)
     plt.plot(np.array(index), np.array(result))
     # naming the x axis
-    plt.xlabel('Episodes')
+    plt.xlabel('Trials')
     # naming the y axis
-    plt.ylabel('Episode Reward')
+    plt.ylabel('Trial Reward')
 
     # giving a title to my graph
     plt.title('Learning Cost')
@@ -209,7 +209,7 @@ if __name__ == "__main__":
     error = [abs(number) for number in err]
     plt.plot(np.array(index), np.ones(len(error)) - (np.array(error)/max(error)))
     # naming the x axis
-    plt.xlabel('Episodes')
+    plt.xlabel('Trials')
     # naming the y axis
     plt.ylabel('Accuracy')
 
