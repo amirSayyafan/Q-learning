@@ -8,9 +8,9 @@ Another challenges is that since high voltage and power factor change can affect
 
 ## Details
 In this step of project, we just focuse on two parameters as our input: voltage and power factor. We consider 4 states and 3 actions for each of these two parameters.\
-The 4 states are: 1- Healthy 2- Acceptable 3- Critical 4- Compromised. In order to disceret the space of values for voltage and make our states we slpit the overall range of voltage into 4 ranges as we shoe in the following:\
+The 4 states are: 1-Healthy 2-Acceptable 3-Critical 4-Compromised. In order to disceret the space of values for voltage and make our states we slpit the overall range of voltage into 4 ranges as we shoe in the following:\
 ![image](https://user-images.githubusercontent.com/20415408/43529592-7f97f8ce-9560-11e8-9700-302cd75c7eda.png)
-Also, for the voltage parameter we have 3 action: 1- no defense 2- increse by fixed step 3- decrese by fixed parameter.
+Also, for the voltage parameter we have 3 action: 1-No defense 2-Increse by fixed step 3-Decrese by fixed parameter.
 Therefore, if we consider each paratmer we have a Q-table with 4 states and 3 actions:
 
 
