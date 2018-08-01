@@ -7,5 +7,5 @@ Generally, Reinforcement Learning uses for sequential and It has some kind of co
 Another challenges is that since high voltage and power factor change can affect the power system in a dangerous mode, our actions are low and fixed changing the parameters.
 
 ## Details
-In this step of project, we just focuse on two parameters as our input: voltage and power factor. We consider 4 states and 3 actions for each of these two parameters. 
+In this step of project, we just focuse on two parameters as our input: voltage and power factor. We consider 4 states and 3 actions for each of these two parameters.\
 The 4 states are: 1- Healthy 2- Acceptable 3- Critical 4- Compromised. In order to disceret the space of values for voltage and make our states we have:
