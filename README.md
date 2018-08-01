@@ -17,7 +17,9 @@ We do the same process for the power factor parameter. We can consider the range
 However, we are going to control these two parameters simultaneously, because these two parameters at the same time specifies the status of our system. As we explained before, for each of these two parameters we have 4 states and 3 action. If we consider them as some pairs of states and action, we have 16 states and 9 actions totally. 
 Then we can define our state machine and define that from one state to another state we can go by which action.\
 The reward for each action for every parameter equals to -1. In this way, if we go through one state to another one by an action which needs two changes (one for each parameter), therefore; the reward for this action equals to -2. 
-For training, we assume a determined number of trials in which we have some steps to go through a specific state. During these trails, we update the values of the Q-table and 
+For training, we assume a determined number of trials in which we have some steps to go through a specific state. During these trails, we update the values of the Q-table and train the system.\
+In the online detection phase: based on the observations, the action with the lowest expected future cost (Q value) is chosen at each time using the previously learned Q-table
+
 
 ## Results
 We need to measure 3 metrics:\
@@ -26,6 +28,8 @@ We need to measure 3 metrics:\
 3- Learning Cost: how long the algorithm needs to train (depends on the amount of computation- computation efficiency)\
 For the Data Accuracy, we train the system by 40 trials and during these training process, we measure the accuracy (since we know the ground truth states). The following curve is the result for these 40 trails:\
 ![image](https://user-images.githubusercontent.com/20415408/43531451-a6e27324-9564-11e8-9739-1357def50366.png)\
-In order to measure the data efficiency of our system, we define different number of steps for each trial. The number of steps starts from 10 to 250 steps. In \
+In order to measure the data efficiency of our system, we define different number of steps for each trial. The number of steps starts from 10 to 250 steps. In each experiment, we count the number of trails in order to reach a specific accuracy. Then we plot these numbers of trials (amount of data in order to train the system) based on the number of steps.\
 At the end, for measuring the learning cost, we run each trial until it goes to state 0 (safe state) and measure the total reward. We observe that after around 40 trials, our system converges.\
+![image](https://user-images.githubusercontent.com/20415408/43532802-33780dd2-9568-11e8-8202-664aa096149f.png)
+
 
