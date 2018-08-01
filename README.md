@@ -12,5 +12,7 @@ The 4 states are: 1-Healthy 2-Acceptable 3-Critical 4-Compromised. In order to d
 ![image](https://user-images.githubusercontent.com/20415408/43529592-7f97f8ce-9560-11e8-9700-302cd75c7eda.png)
 Also, for the voltage parameter we have 3 action: 1-No defense 2-Increse by fixed step 3-Decrese by fixed parameter.
 Therefore, if we consider each paratmer we have a Q-table with 4 states and 3 actions:
+![image](https://user-images.githubusercontent.com/20415408/43530158-c0357626-9561-11e8-9f65-85b1189bb89b.png)
+
 
 
