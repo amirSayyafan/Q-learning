@@ -29,6 +29,7 @@ We need to measure 3 metrics:\
 For the Data Accuracy, we train the system by 40 trials and during these training process, we measure the accuracy (since we know the ground truth states). The following curve is the result for these 40 trails:\
 ![image](https://user-images.githubusercontent.com/20415408/43531451-a6e27324-9564-11e8-9739-1357def50366.png)\
 In order to measure the data efficiency of our system, we define different number of steps for each trial. The number of steps starts from 10 to 250 steps. In each experiment, we count the number of trails in order to reach a specific accuracy. Then we plot these numbers of trials (amount of data in order to train the system) based on the number of steps.\
+![image](https://user-images.githubusercontent.com/20415408/43533158-01129eb0-9569-11e8-8f4f-e3b69265b461.png)
 At the end, for measuring the learning cost, we run each trial until it goes to state 0 (safe state) and measure the total reward. We observe that after around 40 trials, our system converges.\
 ![image](https://user-images.githubusercontent.com/20415408/43532802-33780dd2-9568-11e8-8202-664aa096149f.png)
 
