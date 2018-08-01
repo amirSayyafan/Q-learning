@@ -17,6 +17,7 @@ We do the same process for the power factor parameter. We can consider the range
 However, we are going to control these two parameters simultaneously, because these two parameters at the same time specifies the status of our system. As we explained before, for each of these two parameters we have 4 states and 3 action. If we consider them as some pairs of states and action, we have 16 states and 9 actions totally. 
 Then we can define our state machine and define that from one state to another state we can go by which action.\
 The reward for each action for every parameter equals to -1. In this way, if we go through one state to another one by an action which needs two changes (one for each parameter), therefore; the reward for this action equals to -2. 
+For training, we assume a determined number of trials in which we have some steps to go through a specific state. During these trails, we update the values of the Q-table and 
 
 ## Results
 We need to measure 3 metrics:\
