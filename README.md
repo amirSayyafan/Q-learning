@@ -15,7 +15,8 @@ Therefore, if we consider each paratmer we have a Q-table with 4 states and 3 ac
 ![image](https://user-images.githubusercontent.com/20415408/43530158-c0357626-9561-11e8-9f65-85b1189bb89b.png)\
 We do the same process for the power factor parameter. We can consider the ranges (0.93, 0.94), (0.95, 0.96), (0.97,0.98), (0.99, 100) as the Healthy,  Acceptable, Critical,and Compromised states.\
 However, we are going to control these two parameters simultaneously, because these two parameters at the same time specifies the status of our system. As we explained before, for each of these two parameters we have 4 states and 3 action. If we consider them as some pairs of states and action, we have 16 states and 9 actions totally. 
-
+Then we can define our state machine and define that from one state to another state we can go by which action.\
+The reward for each action for every parameter equals to -1. In this way, if we go through one state to another one by an action which needs two changes (one for each parameter), therefore; the reward for this action equals to -2. 
 
 ## Results
 We need to measure 3 metrics:\
@@ -23,5 +24,7 @@ We need to measure 3 metrics:\
 2- Data Efficiency: the amount of data used for the actual controlled system during learning (to get a specific accuracy)\
 3- Learning Cost: how long the algorithm needs to train (depends on the amount of computation- computation efficiency)\
 For the Data Accuracy, we train the system by 40 trials and during these training process, we measure the accuracy (since we know the ground truth states). The following curve is the result for these 40 trails:\
-![image](https://user-images.githubusercontent.com/20415408/43531451-a6e27324-9564-11e8-9739-1357def50366.png)
+![image](https://user-images.githubusercontent.com/20415408/43531451-a6e27324-9564-11e8-9739-1357def50366.png)\
+In order to measure the data efficiency of our system, we define different number of steps for each trial. The number of steps starts from 10 to 250 steps. In \
+At the end, for measuring the learning cost, we run each trial until it goes to state 0 (safe state) and measure the total reward. We observe that after around 40 trials, our system converges.\
 
